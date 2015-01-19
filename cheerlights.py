@@ -12,11 +12,10 @@ class CheerLights():
     # retrieve and load the JSON data into a JSON object
     def getJSON(self, url):
         jsonFeed = urllib2.urlopen(self.urlRoot + url)
-        feedData = jsonFeed.read()
         # print feedData
+        feedData = jsonFeed.read()
         jsonFeed.close()
         data = json.loads(feedData)
-        # data = feedData
         return data
 
     # read the last entry_id
